@@ -1,0 +1,12 @@
+h1,h2 {
+    text-align: center;
+}
+
+.moves{
+    display: flex;
+    justify-content: center;
+}
+.rock,
+.paper{
+    margin-right:10px;
+}
