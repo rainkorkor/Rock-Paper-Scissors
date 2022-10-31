@@ -73,6 +73,9 @@ let reset = document.createElement('button');
 reset.textContent = 'Reset';
 
 reset.addEventListener('click', function () {
+    scissorsBtn.disabled = false;
+    rockBtn.disabled = false;
+    paperBtn.disabled = false;
     result.textContent=''
     playerScoreValue=0;
     computerScoreValue=0;
@@ -81,7 +84,7 @@ reset.addEventListener('click', function () {
     playerMove.textContent ='';
     computerMove.textContent='';
     result.removeChild(reset);
-    
+
 
 })
 
