@@ -1,3 +1,4 @@
+
 h1,h2 {
     text-align: center;
 }
@@ -9,4 +10,34 @@ h1,h2 {
 .rock,
 .paper{
     margin-right:10px;
+}
+
+
+.score-container{
+    display: flex;
+    justify-content: center;
+}
+.score{
+    display:flex;
+    width: 500px;
+    justify-content: center;
+
+}
+
+
+.player-move,
+.computer-move{
+    border: 2px solid black;
+    width: 100px;
+    height: 100px;
+    
+}
+.score-container {
+    margin:20px;
+}
+.player-container{
+    margin-right: 20px;
+}
+.result{
+    text-align: center;
 }
