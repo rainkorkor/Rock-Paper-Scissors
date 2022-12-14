@@ -9,20 +9,26 @@ let paperBtn =document.querySelector('.paper-button');
 let scissorsBtn = document.querySelector('.scissors-button');
 let playerMove = document.querySelector(".player-move");
 let computerMove = document.querySelector(".computer-move");
+let playerImage = document.querySelector('#player-image')
+let computerImage = document.querySelector('.computer-image')
 
 
 rockBtn.addEventListener('click', function () {
+    playerImage.setAttribute('src','./images/rock.svg')
     playOneRound(getComputerChoice(),'rock');
     checkResult(computerScoreValue,playerScoreValue);
 });
 paperBtn.addEventListener('click', function(){
+    playerImage.setAttribute('src','./images/paper.svg');
     playOneRound(getComputerChoice(),'paper');
     checkResult(computerScoreValue,playerScoreValue);
 });
 scissorsBtn.addEventListener('click', function (){
+    playerImage.setAttribute('src','./images/scissors.svg');
     playOneRound(getComputerChoice(),'scissors');
     checkResult(computerScoreValue,playerScoreValue);
 });
+
 
 
 function getComputerChoice() {
@@ -32,8 +38,13 @@ function getComputerChoice() {
 }
 
 function playOneRound(computerSelection,playerSelection) {
-    playerMove.textContent = playerSelection;
-    computerMove.textContent = computerSelection;
+    if(computerSelection === 'rock'){
+        computerImage.setAttribute('src', './images/rock.svg')
+    } else if(computerSelection ==='paper'){
+        computerImage.setAttribute('src', './images/paper.svg')
+    } else{
+        computerImage.setAttribute('src','./images/scissors.svg')
+    };
     const playerSelectionLower = playerSelection.toLowerCase();
     if (playerSelectionLower === "rock" && computerSelection === "rock") {
         result.textContent =  "It's a tie.";
